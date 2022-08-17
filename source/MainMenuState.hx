@@ -36,11 +36,9 @@ class MainMenuState extends MusicBeatState
 	var inputtext:String;
 	var main7False:Bool = false;
 
-	
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
 		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
 		'options'
@@ -205,6 +203,10 @@ class MainMenuState extends MusicBeatState
 				ClientPrefs.saveSettings();
 			}
 		}
+		#end
+
+		#if android
+		addVirtualPad(UP_DOWN, A);
 		#end
 
 		super.create();
