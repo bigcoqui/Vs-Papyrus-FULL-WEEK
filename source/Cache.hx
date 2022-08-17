@@ -13,7 +13,7 @@ import flixel.util.FlxTimer;
 import flixel.tweens.FlxTween;
 import openfl.display.BitmapData;
 
-#if sys
+#if desktop
 import sys.FileSystem;
 import sys.io.File;
 #end
@@ -50,7 +50,7 @@ class Cache extends FlxState
         
         FlxG.mouse.visible = false;
 		FlxG.worldBounds.set(0, 0);
-        #if sys
+        #if desktop
         for (i in FileSystem.readDirectory(FileSystem.absolutePath( "assets/shared/images/characters")))
         {
             if (!i.endsWith(".png"))
