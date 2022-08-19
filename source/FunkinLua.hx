@@ -30,7 +30,7 @@ import flixel.math.FlxMath;
 import flixel.util.FlxSave;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.system.FlxAssets.FlxShader;
-#if desktop
+#if sys
 import sys.FileSystem;
 import sys.io.File;
 #end
